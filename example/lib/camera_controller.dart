@@ -306,7 +306,7 @@ class CameraController extends ValueNotifier<CameraValue> {
 
   /// Start streaming images from platform camera.
   Future<void> startImageStream(
-      Function(CameraImageData image) onAvailable) async {
+      void Function(CameraImageData image) onAvailable) async {
     _imageStreamSubscription = CameraPlatform.instance
         .onStreamedFrameAvailable(_cameraId)
         .listen((CameraImageData imageData) {
@@ -327,7 +327,7 @@ class CameraController extends ValueNotifier<CameraValue> {
   /// The video is returned as a [XFile] after calling [stopVideoRecording].
   /// Throws a [CameraException] if the capture fails.
   Future<void> startVideoRecording(
-      {Function(CameraImageData image)? streamCallback}) async {
+      {void Function(CameraImageData image)? streamCallback}) async {
     await CameraPlatform.instance.startVideoCapturing(
         VideoCaptureOptions(_cameraId, streamCallback: streamCallback));
     value = value.copyWith(
@@ -502,7 +502,7 @@ class Optional<T> extends IterableBase<T> {
     if (_value == null) {
       throw StateError('value called on absent Optional.');
     }
-    return _value!;
+    return _value;
   }
 
   /// Executes a function if the Optional value is present.
