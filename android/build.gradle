@@ -9,7 +9,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:8.7.1'
+        classpath 'com.android.tools.build:gradle:8.7.2'
     }
 }
 
@@ -34,7 +34,7 @@ buildFeatures {
     compileSdk 35
 
     defaultConfig {
-        minSdkVersion 21
+        minSdk 21
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     lintOptions {
@@ -66,8 +66,9 @@ buildFeatures {
 }
 
 dependencies {
-    implementation 'androidx.annotation:annotation:1.8.2'
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.10.0'
+    implementation 'androidx.annotation:annotation:1.9.0'
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation 'org.mockito:mockito-inline:5.0.0'
     testImplementation 'androidx.test:core:1.4.0'
     testImplementation 'org.mockito:mockito-inline:5.2.0'
     testImplementation 'org.robolectric:robolectric:4.10.3'
