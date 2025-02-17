@@ -26,15 +26,16 @@ dependencies:
     sdk: flutter
   flutter_plugin_android_lifecycle: 
     git: https://github.com/kumsumit/flutter_plugin_android_lifecycle.git
-  stream_transform: ^2.0.0
+  stream_transform: ^2.1.1
 
 dev_dependencies:
   async: ^2.5.0
   build_runner: ^2.4.11
   flutter_test:
     sdk: flutter
-  mockito: ^5.4.4
-  pigeon: ^22.4.1
+  mockito: ^5.4.5
+  pigeon:
+   git: https://github.com/kumsumit/pigeon.git
 
 topics:
   - camera
